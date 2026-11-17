@@ -1,0 +1,19 @@
+{
+  "slug": "robovac-pov",
+  "title": "Robot vacuum POV (lifelike video made only with code)",
+  "type": "shortform",
+  "status": "v1 rendered, not reviewed",
+  "created": "2026-11-17",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "duration": 53.03,
+  "inspired_by": "https://x.com/BubbleBrain/status/2122313967473434639 (Cat Garden, github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/cat-garden)",
+  "how": "No AI video model, no 3D package, no textures, no recordings. src/scene.h models the flat procedurally in C++, src/render.metal is a path tracer in one Metal compute kernel (hardware ray tracing, runtime-compiled), src/path.h simulates the robot and its camera, src/main.mm does lens/sensor post-processing and pipes frames to ffmpeg, src/audio.py synthesises the sound from the event timeline with numpy/scipy.",
+  "build": "./build.sh",
+  "render": "./render.sh renders/v1.mp4 36   (about 45 min on the M5; segments in work/seg are resumable)",
+  "checks": "./robovac --collide   (route vs. furniture);  ./robovac --eye x y z --at x y z --frames dir   (free camera stills);  --mode 1..5 debug views",
+  "repo": "https://github.com/moritzkremb/robovac-pov",
+  "framejam_review": null,
+  "published": null
+}

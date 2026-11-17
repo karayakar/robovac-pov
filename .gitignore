@@ -1,0 +1,10 @@
+# build output and intermediates
+/robovac
+/work/
+/.venv/
+__pycache__/
+.DS_Store
+
+# the finished video is over GitHub's 100 MB file limit; it is attached to the release instead
+/renders/*.mp4
+/final/
